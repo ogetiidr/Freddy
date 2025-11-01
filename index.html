@@ -1,0 +1,243 @@
+<meta name='viewport' content='width=device-width, initial-scale=1'/><meta name='viewport' content='width=device-width, initial-scale=1'/><meta name='viewport' content='width=device-width, initial-scale=1'/><meta name='viewport' content='width=device-width, initial-scale=1'/><!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Freddy tech Boosting</title>
+<style>
+  /* General body */
+  body {
+    font-family: 'Courier New', monospace;
+    background: #000;
+    color: #0f0;
+    padding: 20px;
+    text-align: center;
+    overflow-x: hidden;
+  }
+
+  /* Terminal-like background animation */
+  body::before {
+    content: '';
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: url('https://i.ibb.co/XSrWJ7v/matrix-bg.jpg') repeat;
+    opacity: 0.1;
+    z-index: -1;
+    animation: bgMove 30s linear infinite;
+  }
+  @keyframes bgMove {
+    0% { background-position: 0 0; }
+    100% { background-position: 1000px 1000px; }
+  }
+
+  .container { max-width: 700px; margin: auto; }
+  h1 {
+    text-align: center;
+    color: #0f0;
+    font-size: 36px;
+    text-shadow: 0 0 10px #0f0, 0 0 20px #0f0, 0 0 30px #0f0;
+  }
+
+  /* Cards */
+  .card {
+    background: #111;
+    padding: 20px;
+    margin-bottom: 15px;
+    border-radius: 12px;
+    box-shadow: 0 0 20px #0f0;
+    text-align: left;
+    border: 1px solid #0f0;
+  }
+  .form-control {
+    margin-bottom: 10px;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #0f0;
+    border-radius: 6px;
+    background: #000;
+    color: #0f0;
+  }
+  button {
+    width: 100%;
+    padding: 12px;
+    background: #0f0;
+    color: #000;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    box-shadow: 0 0 10px #0f0;
+    animation: pulse 2s infinite;
+  }
+  button:hover { background: #0f8; }
+
+  @keyframes pulse {
+    0%, 100% { box-shadow: 0 0 10px #0f0, 0 0 20px #0f0; }
+    50% { box-shadow: 0 0 20px #0f0, 0 0 40px #0f0; }
+  }
+
+  /* Notice */
+  .notice {
+    background: #111;
+    padding: 15px;
+    border-left: 5px solid #0f0;
+    border-radius: 6px;
+    margin-bottom: 15px;
+    color: #0f0;
+    text-align: left;
+    box-shadow: 0 0 15px #0f0;
+  }
+
+  /* Hacker countdown circle */
+  .countdown-wrapper { margin: 30px 0; position: relative; }
+  .circle {
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    border: 10px solid transparent;
+    border-top: 10px solid red;
+    border-right: 10px solid orange;
+    border-bottom: 10px solid yellow;
+    border-left: 10px solid lime;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    font-size: 24px;
+    font-weight: bold;
+    color: #0f0;
+    text-shadow: 0 0 15px #0f0, 0 0 30px #0f0;
+    animation: spin 3s linear infinite, glow 2s infinite alternate;
+  }
+  @keyframes spin { 100% { transform: rotate(360deg); } }
+  @keyframes glow { 0% { box-shadow: 0 0 10px #0f0, 0 0 20px #0f0; } 100% { box-shadow: 0 0 30px #0f0, 0 0 50px #0f0; } }
+
+  .group-link { margin-top: 15px; font-size: 16px; }
+  .group-link a { color: #0f0; font-weight: bold; text-decoration: none; }
+
+  /* Special TikTok Price Drop Alert */
+  .special-alert {
+    background:#000;
+    border:2px solid #0f0;
+    box-shadow:0 0 25px #0f0;
+    text-align:center;
+    font-size:18px;
+    font-weight:bold;
+    margin-bottom:20px;
+    padding:15px;
+    animation: pulseNotice 1.5s infinite alternate;
+  }
+  @keyframes pulseNotice {
+    from { box-shadow:0 0 15px #0f0, 0 0 30px lime; }
+    to { box-shadow:0 0 30px #0f0, 0 0 60px lime; }
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <h1>🚀 Friddie tech Boosting</h1>
+
+  <!-- NEW TikTok Likes Price Drop Notice -->
+  <div class="special-alert">
+    🚨 ALERT: TikTok Likes Price Drop! 🚨 <br>
+    🎉 Get <b>5000 Likes</b> for only <b>30 KSh</b> 🎉
+  </div>
+
+  <div class="notice">
+    <p><b>Payment Instructions:</b></p>
+    <p>Send exact amount to <b>M-Pesa:0758557117</b></p>
+    <p>✅ System is <b>automatic</b>. Boost happens <b>within 1 hour</b>.</p>
+  </div>
+
+  <div class="countdown-wrapper">
+    <div class="circle" id="countdown">0d 0h 0m 0s</div>
+    <div class="group-link">
+      👉 After order <a href="https://chat.whatsapp.com/GdHemTstB749MSObV5PAjJ?mode=ems_share_t" target="_blank">join our WhatsApp group</a>
+    </div>
+  </div>
+
+  <div class="card">
+    <label>Platform</label>
+    <select id="platform" class="form-control">
+      <option value="TikTok">TikTok</option>
+      <option value="Instagram">Instagram</option>
+      <option value="Facebook">Facebook</option>
+    </select>
+    <label>Service</label>
+    <select id="service" class="form-control">
+      <option value="Followers">Followers</option>
+      <option value="Likes">Likes</option>
+      <option value="Views">Views</option>
+    </select>
+    <label>Quantity</label>
+    <input type="number" id="quantity" class="form-control" placeholder="Enter quantity">
+    <label>Post/Account Link</label>
+    <input type="text" id="link" class="form-control" placeholder="Enter your post/account link">
+    <p><b>Total: </b><span id="price">0</span> KSh</p>
+    <button onclick="submitOrder()">Submit Order</button>
+  </div>
+</div>
+
+<script>
+const SERVICES = {
+  TikTok: { Followers: 0.4, Likes: 0.006, Views: 0.10 }, // updated Likes rate
+  Instagram: { Followers: 0.4, Likes: 0.35 },
+  Facebook: { Followers: 0.5, Likes: 0.4 }
+};
+
+function calculatePrice() {
+  const platform = document.getElementById("platform").value;
+  const service = document.getElementById("service").value;
+  const quantity = parseInt(document.getElementById("quantity").value) || 0;
+  const unitPrice = SERVICES[platform][service] || 0;
+  const total = unitPrice * quantity;
+  document.getElementById("price").textContent = total;
+  return total;
+}
+document.getElementById("quantity").addEventListener("input", calculatePrice);
+document.getElementById("platform").addEventListener("change", calculatePrice);
+document.getElementById("service").addEventListener("change", calculatePrice);
+
+function submitOrder() {
+  const platform = document.getElementById("platform").value;
+  const service = document.getElementById("service").value;
+  const quantity = document.getElementById("quantity").value;
+  const link = document.getElementById("link").value;
+  const price = calculatePrice();
+  if (!quantity || !link) {
+    alert("Please enter quantity and post link!");
+    return;
+  }
+  const message = `Hi freddy tech, I have paid.\n\nHere is my order:\nPlatform: ${platform}\nService: ${service}\nQuantity: ${quantity}\nAmount: KSh ${price}\n\nPost link: ${link}\n\n✅ System is automatic, just watch my boosting results!`;
+  const whatsappURL = `https://wa.me/+254758557117?text=${encodeURIComponent(message)}`;
+  window.open(whatsappURL, "_blank");
+}
+
+// Countdown to 25th of current month
+const countdownElement = document.getElementById("countdown");
+function getDeadline() {
+  const now = new Date();
+  let year = now.getFullYear(), month = now.getMonth(), day = 25;
+  if (now.getDate() > 25) { month += 1; if(month>11){month=0;year+=1;} }
+  return new Date(year, month, day, 23, 59, 59).getTime();
+}
+const deadline = getDeadline();
+
+function updateCountdown() {
+  const now = new Date().getTime();
+  const distance = deadline - now;
+  if(distance < 0){ countdownElement.textContent = "EXPIRED"; return; }
+  const days = Math.floor(distance/(1000*60*60*24));
+  const hours = Math.floor((distance % (1000*60*60*24)) / (1000*60*60));
+  const minutes = Math.floor((distance % (1000*60*60)) / (1000*60));
+  const seconds = Math.floor((distance % (1000*60)) / 1000);
+  countdownElement.textContent = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+}
+updateCountdown();
+setInterval(updateCountdown, 1000);
+</script>
+</body>
+  </html>
